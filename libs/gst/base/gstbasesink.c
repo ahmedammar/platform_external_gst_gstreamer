@@ -2795,6 +2795,10 @@ gst_base_sink_reset_qos (GstBaseSink * sink)
 
   priv = sink->priv;
 
+  GST_CAT_INFO_OBJECT (GST_CAT_QOS, sink,
+    "qos: rendered %" G_GUINT64_FORMAT ", dropped %" G_GUINT64_FORMAT,
+    priv->rendered, priv->dropped);
+
   priv->last_render_time = GST_CLOCK_TIME_NONE;
   priv->prev_rstart = GST_CLOCK_TIME_NONE;
   priv->earliest_in_time = GST_CLOCK_TIME_NONE;
