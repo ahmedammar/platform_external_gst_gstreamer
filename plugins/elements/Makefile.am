@@ -60,7 +60,7 @@ CLEANFILES = *.gcno *.gcda *.gcov *.gcov.out
 gcov: $(libgstcoreelements_la_SOURCES:=.gcov)
 
 Android.mk: Makefile.am
-	androgenizer -:PROJECT gstreamer -:SHARED libgstcoreelements -:TAGS eng debug \
+	androgenizer -:PROJECT gstreamer -:SHARED libgstcoreelements -:TAGS user eng debug \
 	 -:REL_TOP $(top_srcdir) -:ABS_TOP $(abs_top_srcdir) \
 	 -:SOURCES $(libgstcoreelements_la_SOURCES) \
 	 -:CFLAGS $(DEFS) $(libgstcoreelements_la_CFLAGS) \

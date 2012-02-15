@@ -250,7 +250,7 @@ gcov: $(libgstreamer_@GST_MAJORMINOR@_la_SOURCES:=.gcov)
 
 Android.mk: Makefile.am
 	androgenizer -:PROJECT gstreamer -:SHARED libgstreamer-@GST_MAJORMINOR@ \
-	 -:TAGS eng debug \
+	 -:TAGS user eng debug \
          -:REL_TOP $(top_srcdir) -:ABS_TOP $(abs_top_srcdir) \
 	 -:SOURCES $(libgstreamer_@GST_MAJORMINOR@_la_SOURCES) \
 	           $(nodist_libgstreamer_@GST_MAJORMINOR@_la_SOURCES) \

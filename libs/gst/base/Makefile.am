@@ -50,7 +50,7 @@ CLEANFILES = *.gcno *.gcda *.gcov
 gcov: $(libgstbase_@GST_MAJORMINOR@_la_SOURCES:=.gcov)
 
 Android.mk: Makefile.am
-	androgenizer -:PROJECT gstreamer -:SHARED libgstbase-@GST_MAJORMINOR@ -:TAGS eng debug \
+	androgenizer -:PROJECT gstreamer -:SHARED libgstbase-@GST_MAJORMINOR@ -:TAGS user eng debug \
 	 -:REL_TOP $(top_srcdir) -:ABS_TOP $(abs_top_srcdir) \
 	 -:SOURCES $(libgstbase_@GST_MAJORMINOR@_la_SOURCES) \
 	 -:CFLAGS $(DEFS) $(libgstbase_@GST_MAJORMINOR@_la_CFLAGS) \
