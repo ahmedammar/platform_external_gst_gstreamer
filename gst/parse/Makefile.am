@@ -22,7 +22,7 @@ libgstparse_la_LIBADD = $(GST_ALL_LIBS)
 noinst_HEADERS = grammar.tab.h types.h
 
 Android.mk: Makefile.am
-	androgenizer -:PROJECT gstreamer -:STATIC libgstparse -:TAGS user eng debug \
+	androgenizer -:PROJECT gstreamer -:STATIC libgstparse -:TAGS optional eng debug \
 	 -:REL_TOP $(top_srcdir) -:ABS_TOP $(abs_top_srcdir) \
 	 -:SOURCES $(libgstparse_la_SOURCES) $(nodist_libgstparse_la_SOURCES) \
 	 -:CFLAGS $(DEFS) $(libgstparse_la_CFLAGS) \
